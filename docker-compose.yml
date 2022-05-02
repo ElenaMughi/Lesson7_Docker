@@ -1,13 +1,13 @@
-version: '3.7'
+version: '1.1'
 services:
   postgres:
     image: postgres:latest
+#    restart: always
     ports:
       - '5432:5432'
     volumes:
-      - ./data:/VAR/LIB/POSTGRESQL
+      - ./data:/VAR/LIB/postgressql/data
     environment:
-      - POSTGRES_RANDOM_ROOT_PASSWORD=yes
-      - POSTGRES_DATABASE=db
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=mysecretpassword
+    - POSTGRES_DB=mypostgre
+#    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=p@$$word
