@@ -1,13 +1,12 @@
-version: '1.1'
+version: "3.7"
 services:
   postgres:
     image: postgres:latest
-#    restart: always
-    ports:
-      - '5432:5432'
     volumes:
-      - ./data:/VAR/LIB/postgressql/data
+      - ./data:/var/lib/postgressql/data
+    ports:
+      - "5432:5432"
     environment:
-    - POSTGRES_DB=mypostgre
-#    - POSTGRES_USER=postgres
-    - POSTGRES_PASSWORD=p@$$word
+      - POSTGRES_DB=mypostgre
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=apass
